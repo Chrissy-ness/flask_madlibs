@@ -9,6 +9,8 @@
 </head>
 <body>
     <h1>Generate a Madlib Story</h1>
+    {% block error %}
+    {% endblock %}
     {% block content %}
     <form action="/story">
             {% for word in words %}
@@ -16,6 +18,11 @@
             {% endfor%}
             <button>Submit</button>
     </form>
+    <div>
+        <h4>{{text}}</h4>
+    </div>
     {% endblock %}
 </body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="/static/app.js"></script>
 </html>
